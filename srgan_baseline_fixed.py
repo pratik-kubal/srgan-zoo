@@ -5,7 +5,6 @@
 
 
 from keras.datasets import mnist
-from keras_contrib.layers.normalization.instancenormalization import InstanceNormalization
 from keras.layers import Input, Dense, Reshape, Flatten, Dropout, Concatenate, MaxPooling2D
 from keras.layers import BatchNormalization, Activation, ZeroPadding2D, Add, LeakyReLU, Lambda
 from keras.layers.advanced_activations import PReLU, LeakyReLU
@@ -183,7 +182,7 @@ combined.summary()
 # In[ ]:
 
 
-SVG(model_to_dot(combined, show_layer_names=True, show_shapes=True).create(prog='dot', format='svg'))
+#SVG(model_to_dot(combined, show_layer_names=True, show_shapes=True).create(prog='dot', format='svg'))
 
 
 # In[8]:
@@ -271,7 +270,7 @@ tl.vis.save_images(sample_lr, [int(ni), int(ni)],'images/'+dataset_name+'/sample
 
 
 tensorboard = TensorBoard(
-  log_dir='log/srgan_endgame/run3',
+  log_dir='log/srgan_endgame/run5',
   histogram_freq=0,
   batch_size=batch_size,
   write_graph=True,
