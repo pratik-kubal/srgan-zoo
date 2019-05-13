@@ -1,0 +1,251 @@
+
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/pratik_p_kubal/anaconda3/envs/srgan/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-12 14:06:32.110545: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-12 14:06:32.119789: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-05-12 14:06:32.122740: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55e5c4371010 executing computations on platform Host. Devices:
+2019-05-12 14:06:32.122810: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-12 14:06:32.677620: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 14:06:32.681607: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 14:06:32.706553: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 14:06:32.718974: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 14:06:32.720252: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55e5c3f63400 executing computations on platform CUDA. Devices:
+2019-05-12 14:06:32.720281: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 14:06:32.720288: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 14:06:32.720294: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (2): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 14:06:32.720300: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (3): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 14:06:32.721884: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 14:06:32.722327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:05.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 14:06:32.722752: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 2 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:06.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 14:06:32.723176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 3 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:07.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 14:06:32.725735: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1, 2, 3
+2019-05-12 14:06:32.730866: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-12 14:06:32.730887: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 2 3 
+2019-05-12 14:06:32.730894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N Y Y Y 
+2019-05-12 14:06:32.730899: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   Y N Y Y 
+2019-05-12 14:06:32.730934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 2:   Y Y N Y 
+2019-05-12 14:06:32.730939: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 3:   Y Y Y N 
+2019-05-12 14:06:32.732562: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15021 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+2019-05-12 14:06:32.732932: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15021 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:05.0, compute capability: 7.0)
+2019-05-12 14:06:32.733344: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15021 MB memory) -> physical GPU (device: 2, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:06.0, compute capability: 7.0)
+2019-05-12 14:06:32.733650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15021 MB memory) -> physical GPU (device: 3, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:07.0, compute capability: 7.0)
+/home/pratik_p_kubal/anaconda3/envs/srgan/lib/python3.7/site-packages/keras/engine/training.py:490: UserWarning: Discrepancy between trainable weights and collected trainable weights, did you set `model.trainable` without calling `model.compile` after ?
+  'Discrepancy between trainable weights and collected trainable'
+WARNING:tensorflow:From /home/pratik_p_kubal/anaconda3/envs/srgan/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-05-12 14:07:09.202568: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/pratik_p_kubal/anaconda3/envs/srgan/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-05-12 19:24:26.374796: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-12 19:24:26.383112: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2019-05-12 19:24:26.385994: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x564eba10c530 executing computations on platform Host. Devices:
+2019-05-12 19:24:26.386062: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-12 19:24:26.960005: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 19:24:26.972397: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 19:24:26.998580: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 19:24:27.013539: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-12 19:24:27.014839: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x564eb9cfd4a0 executing computations on platform CUDA. Devices:
+2019-05-12 19:24:27.014878: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 19:24:27.014886: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 19:24:27.014891: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (2): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 19:24:27.014896: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (3): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2019-05-12 19:24:27.016643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 19:24:27.017087: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:05.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 19:24:27.017531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 2 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:06.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 19:24:27.017982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 3 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:07.0
+totalMemory: 15.75GiB freeMemory: 15.44GiB
+2019-05-12 19:24:27.020546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1, 2, 3
+2019-05-12 19:24:27.025922: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-12 19:24:27.025944: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 2 3 
+2019-05-12 19:24:27.025950: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N Y Y Y 
+2019-05-12 19:24:27.025955: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   Y N Y Y 
+2019-05-12 19:24:27.025959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 2:   Y Y N Y 
+2019-05-12 19:24:27.025964: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 3:   Y Y Y N 
+2019-05-12 19:24:27.027643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15021 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+2019-05-12 19:24:27.028164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15021 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:05.0, compute capability: 7.0)
+2019-05-12 19:24:27.028649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15021 MB memory) -> physical GPU (device: 2, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:06.0, compute capability: 7.0)
+2019-05-12 19:24:27.029038: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15021 MB memory) -> physical GPU (device: 3, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:07.0, compute capability: 7.0)
+/home/pratik_p_kubal/anaconda3/envs/srgan/lib/python3.7/site-packages/keras/engine/training.py:490: UserWarning: Discrepancy between trainable weights and collected trainable weights, did you set `model.trainable` without calling `model.compile` after ?
+  'Discrepancy between trainable weights and collected trainable'
+WARNING:tensorflow:From /home/pratik_p_kubal/anaconda3/envs/srgan/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-05-12 19:25:03.239378: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+Epoch:0
+Epoch:1
+Epoch:2
+Epoch:3
+Epoch:4
+Epoch:5
+Epoch:6
+Epoch:7
+Epoch:8
+Epoch:9
+Epoch:10
+Epoch:11
+Epoch:12
+Epoch:13
+Epoch:14
+Epoch:15
+Epoch:16
+Epoch:17
+Epoch:18
+Epoch:19
+Epoch:20
+Epoch:21
+Epoch:22
+Epoch:23
+Epoch:24
+Epoch:25
+Epoch:26
+Epoch:27
+Epoch:28
+Epoch:29
+Epoch:30
+Epoch:31
+Epoch:32
+Epoch:33
+Epoch:34
+Epoch:35
+Epoch:36
+Epoch:37
+Epoch:38
+Epoch:39
+Epoch:40
+Epoch:41
+Epoch:42
+Epoch:43
+Epoch:44
+Epoch:45
+Epoch:46
+Epoch:47
+Epoch:48
+Epoch:49
+Epoch:50
+Epoch:51
+Epoch:52
+Epoch:53
+Epoch:54
+Epoch:55
+Epoch:56
+Epoch:57
+Epoch:58
+Epoch:59
+Epoch:60
+Epoch:61
+Epoch:62
+Epoch:63
+Epoch:64
+Epoch:65
+Epoch:66
+Epoch:67
+Epoch:68
+Epoch:69
+Epoch:70
+Epoch:71
+Epoch:72
+Epoch:73
+Epoch:74
+Epoch:75
+Epoch:76
+Epoch:77
+Epoch:78
+Epoch:79
+Epoch:80
+Epoch:81
+Epoch:82
+Epoch:83
+Epoch:84
+Epoch:85
+Epoch:86
+Epoch:87
+Epoch:88
+Epoch:89
+Epoch:90
+Epoch:91
+Epoch:92
+Epoch:93
+Epoch:94
+Epoch:95
+Epoch:96
+Epoch:97
+Epoch:98
+Epoch:99
+Epoch:100
+Epoch:101
+Epoch:102
+Epoch:103
+Epoch:104
+Epoch:105
+Epoch:106
+Epoch:107
+Epoch:108
+Epoch:109
+Epoch:110
+Epoch:111
+Epoch:112
+Epoch:113
+Epoch:114
+Epoch:115
+Epoch:116
+Epoch:117
+Epoch:118
+Epoch:119
+Epoch:120
+Epoch:121
+Epoch:122
+Epoch:123
+Epoch:124
+Epoch:125
+Epoch:126
+Epoch:127
+Epoch:128
+Epoch:129
+Epoch:130
+Epoch:131
+Epoch:132
+Epoch:133
+Epoch:134
+Epoch:135
+Epoch:136
+Epoch:137
+Epoch:138
+Epoch:139
+Epoch:140
+Epoch:141
+Epoch:142
+Epoch:143
+Epoch:144
+Epoch:145
+Epoch:146
+Epoch:147
+Epoch:148
+Epoch:149
